@@ -1,0 +1,315 @@
+#hyperVideoContent, #list{
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;    
+	box-sizing: border-box;
+}
+
+#hyperVideoContentWindow{
+	position: relative;
+}
+
+.hide{
+	display: none;
+}
+
+#loadingWindow{
+	width: 100%;
+    background-color: black;
+    color: white;
+    font-size: 25px;
+}
+
+#loadingWindow img{
+	width: 50px;
+    margin: 0 auto;
+    position: relative;
+    display: block;
+    vertical-align: middle;
+    top: 45%;
+    opacity: 0.5;
+}
+
+div::-webkit-scrollbar{
+  width: 0px;  /* for vertical scrollbars */
+  height: 0px; /* for horizontal scrollbars */
+}
+
+#list{
+	overflow: scroll;
+	float: left;
+	background-color: #2d2d2d;
+}
+
+.listNonFull{
+	width: 14.1%;
+}
+
+.listFull{
+	width: 10%;
+}
+
+#list ul{
+	padding: 0px;
+	margin: 0px;
+	background-color: #2d2d2d;
+}
+
+#list li{
+	border-bottom: 1px solid #222222;
+	cursor: pointer;
+	margin: 0;
+}
+
+#list li p{
+	text-align: right;
+	color: white;
+	font-size: 16px;
+	border-bottom: 1px solid #383838;
+	padding: 5px 10px;
+	margin: 0;
+}
+
+.currentStory{
+	background-color: #f04e23;
+	border-color: #f04e23;
+	color: white;
+}
+
+#toggleSidebar{
+	position: absolute;
+    top: 3px;
+    width: 8px;
+    background-color: black;
+    opacity: 0.8;
+    border-radius: 5px 0px 0px 5px;
+    padding: 5px;
+    -webkit-transition: opacity 0.5s ease;
+    -moz-transition: opacity 0.5s ease;
+    -o-transition: opacity 0.5s ease;
+    transition: opacity 0.5s ease;
+}
+
+#toggleSidebar img{
+	width: 100%;
+	display: block;
+}
+
+#hyperVideoPlayer{
+    float: left;
+    height: 640.688px;
+    display: block;
+    position: relative;
+}
+
+.hyperVideoPlayerNonFull{
+	width: 85.9%;
+}
+
+.hyperVideoPlayerFull{
+	width: 90%;
+}
+
+#hypervideo{
+	height: inherit;
+	-webkit-transition: width 0.5s ease;
+    -moz-transition: width 0.5s ease;
+    -o-transition: width 0.5s ease;
+    transition: width 0.5s ease;
+}
+
+#controls{
+	width: 100%;
+	height: 35px;
+	position: absolute;
+	bottom: 0;
+	background-color: black;
+	opacity: 0.8;
+	-webkit-transition: opacity 0.5s ease;
+    -moz-transition: opacity 0.5s ease;
+    -o-transition: opacity 0.5s ease;
+    transition: opacity 0.5s ease;
+}
+
+.controlsHide{
+	opacity: 0 !important;
+}
+
+#tooltip{
+    position: absolute;
+    bottom: 45px;
+	padding: 5px;
+	font-family: Arial;
+	font-size: 11px;
+    color: #e4e4e4;
+    background-color: rgba(0,0,0, 0.8);
+    -webkit-transition: opacity 0.5s ease;
+    -moz-transition: opacity 0.5s ease;
+    -o-transition: opacity 0.5s ease;
+    transition: opacity 0.5s ease;
+    opacity: 0;
+}
+
+#shareBox{
+    position: absolute;
+    bottom: 45px;
+    left: 20px;
+	padding: 5px;
+	font-family: Arial;
+	font-size: 13px;
+    color: #e4e4e4;
+    background-color: rgba(0,0,0, 0.8);
+}
+
+.shareBoxHidden{
+	display: none;
+}
+
+#shareBox div{
+	margin: 5px 3px;
+	padding: 0;
+	float: left;
+}
+
+#downloadButton{
+	float: right !important;
+	text-decoration: underline;
+    cursor: pointer;
+}
+
+#durationBar{
+    position: absolute;
+    top: -3px;
+    width: 100%;
+}
+
+.durationBarStatic{
+	height: 3px;
+}
+
+.durationBarActive{
+	height: 6px;
+}
+
+#progressBar{
+	background-color: red;
+}
+
+#remainderBar{
+	width: 100%;
+    right: 0;
+    background-color: gray;
+}
+
+#progressBar, #remainderBar{
+	position: absolute;
+	-webkit-transition: width 0.3s linear, height 0.2s ease;
+    -moz-transition: width 0.3s linear, height 0.2s ease;
+    -o-transition: width 0.3s linear, height 0.2s ease;
+    transition: width 0.3s linear, height 0.2s ease;
+}
+
+ #playbackScrubber{
+	position: absolute;
+	top: 2px;
+	z-index: 1;
+	left: 7px;
+	-webkit-transition: width 0.2s ease, transform 0.2s ease;
+    -moz-transition: width 0.2s ease, transform 0.2s ease;
+    -o-transition: width 0.2s ease, transform 0.2s ease;
+    transition: width 0.2s ease, transform 0.2s ease;
+}
+
+
+#playButton{
+	left: 16px;
+}
+
+#shareButton{
+	left: 59px;
+}
+
+#volumeButton{
+	left: 106px;
+}
+
+#currentTime{
+	font-family: Arial;
+	font-size: 14px;
+	padding-top: 10px !important;
+	color: #e4e4e4;
+	left: 153px;
+}
+
+#playButton, #shareButton, #volumeButton, #currentTime{
+	position: absolute;
+	float: left;
+	padding: 8px;
+}
+
+#fullscreenButton{
+	float: right;
+	padding: 8px 20px 8px 8px;
+}
+
+#fullscreenButton, #shareButton, #volumeButton, #playButton, #currentTime{
+    -webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;    
+	box-sizing: border-box;
+	height: 100%;
+}
+
+.fullscreen{
+	position:fixed;
+	display: block;
+	z-index: 10;
+	top: 0;
+	left: 0;
+	height: 100vh;
+	width: 100vw;
+	background-color: black;
+}
+
+#standardVideo{
+	width: 100%;
+}
+
+#brokenToggle{
+	cursor: pointer;
+}
+
+.bodyHide{
+	width: 100vh;
+	height: 100vh;
+	overflow: hidden;
+}
+
+
+@media only screen and (max-width: 990px) {
+		    #list li p{
+				font-size: 20px;
+			}
+}
+
+@media only screen and (max-width: 760px) {
+		    #list li p{
+				font-size: 16px;
+			}
+}
+
+@media only screen and (max-width: 650px) {
+		    #list li p{
+				font-size: 12px;
+			}
+}
+
+@media only screen and (max-width: 530px) {
+		    .hyperVideoPlayerNonFull {
+   				width: 100%;
+			}
+			#list {
+				display: none;
+			}
+}
+
+
+

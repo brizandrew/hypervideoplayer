@@ -1,5 +1,9 @@
 var vid = new Hypervideo({
-	path: "reel.mp4"
+	path: "reel.mp4",
+	list: [	"test",
+			"hello",
+			"testing"
+		  ]
 });
 
 vid.cue(5, function(){alert("hello");});
