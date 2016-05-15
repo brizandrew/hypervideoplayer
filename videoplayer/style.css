@@ -1,3 +1,7 @@
+body{
+	margin: 0px;
+	min-width: 400px;
+}
 #hyperVideoContent, #list{
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;    
@@ -41,11 +45,11 @@ div::-webkit-scrollbar{
 }
 
 .listNonFull{
-	width: 14.1%;
+/*	width: 14.1%;*/
 }
 
 .listFull{
-	width: 10%;
+/*	width: 10%;*/
 }
 
 #list ul{
@@ -63,13 +67,13 @@ div::-webkit-scrollbar{
 #list li p{
 	text-align: right;
 	color: white;
-	font-size: 16px;
+	font-size: 28px;
 	border-bottom: 1px solid #383838;
 	padding: 5px 10px;
 	margin: 0;
 }
 
-.currentStory{
+.currentItem{
 	background-color: #f04e23;
 	border-color: #f04e23;
 	color: white;
@@ -96,17 +100,17 @@ div::-webkit-scrollbar{
 
 #hyperVideoPlayer{
     float: left;
-    height: 640.688px;
+/*    height: 640.688px;*/
     display: block;
     position: relative;
 }
 
-.hyperVideoPlayerNonFull{
-	width: 85.9%;
+.hypervideoPlayerNonFull{
+/*	width: 85.9%;*/
 }
 
 .hyperVideoPlayerFull{
-	width: 90%;
+/*	width: 90%;*/
 }
 
 #hypervideo{
@@ -178,30 +182,27 @@ div::-webkit-scrollbar{
 
 #durationBar{
     position: absolute;
+    cursor: pointer;
     top: -3px;
+    display: flex;
     width: 100%;
+    height: 5px;
+    background-color: gray;
+    flex-direction: row;
+    -webkit-transition: top 0.2s, height 0.2s;
+    -moz-transition: top 0.2s, height 0.2s;
+    -ms-transition: top 0.2s, height 0.2s;
+    transition: top 0.2s, height 0.2s;
 }
 
-.durationBarStatic{
-	height: 3px;
-}
-
-.durationBarActive{
-	height: 6px;
+#durationBar:hover{
+	height: 10px;
+	top: -6px;
 }
 
 #progressBar{
+	width: 0%;
 	background-color: red;
-}
-
-#remainderBar{
-	width: 100%;
-    right: 0;
-    background-color: gray;
-}
-
-#progressBar, #remainderBar{
-	position: absolute;
 	-webkit-transition: width 0.3s linear, height 0.2s ease;
     -moz-transition: width 0.3s linear, height 0.2s ease;
     -o-transition: width 0.3s linear, height 0.2s ease;
@@ -303,7 +304,7 @@ div::-webkit-scrollbar{
 }
 
 @media only screen and (max-width: 530px) {
-		    .hyperVideoPlayerNonFull {
+		    .hypervideoPlayerNonFull {
    				width: 100%;
 			}
 			#list {

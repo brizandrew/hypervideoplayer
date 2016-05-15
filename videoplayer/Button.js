@@ -36,3 +36,13 @@ Button.prototype._toggle = function(){
 	}
 }
 
+Button.prototype.setButtonOn = function(){
+	this._ele.src = this._onImg;
+	this._toggled = true;
+}
+
+Button.prototype.setButtonOff = function(){
+	this._ele.src = this._offImg;
+	this._toggled = false;
+}
+
